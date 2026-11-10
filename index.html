@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Recipe Book · Privacy</title>
+        <meta
+            name="description"
+            content="Recipe Book is an app for you and your household. This is how it handles your data." />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Young+Serif&display=swap"
+            rel="stylesheet" />
+        <style>
+            :root {
+                --paper: #f6efe3;
+                --card: #fffaf2;
+                --ink: #2b231c;
+                --muted: #76685a;
+                --line: #e4d8c5;
+                --terra: #b4532a;
+                color-scheme: light;
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --paper: #1b1713;
+                    --card: #25201a;
+                    --ink: #f0e7d9;
+                    --muted: #a99a8a;
+                    --line: #3a3129;
+                    --terra: #e2794c;
+                    color-scheme: dark;
+                }
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                background: var(--paper);
+                color: var(--ink);
+                font:
+                    17px/1.6 Figtree,
+                    system-ui,
+                    sans-serif;
+            }
+            main {
+                max-width: 680px;
+                margin: 0 auto;
+                padding: 24px 16px 48px;
+            }
+            .langs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: flex-end;
+            }
+            .langs a {
+                color: var(--muted);
+                text-decoration: none;
+                font-weight: 600;
+                padding: 6px 12px;
+                border-radius: 999px;
+                border: 1px solid var(--line);
+            }
+            .langs a[aria-current='true'] {
+                color: var(--card);
+                background: var(--terra);
+                border-color: var(--terra);
+            }
+            .brand {
+                font-family: 'Young Serif', Georgia, serif;
+                color: var(--terra);
+                font-size: 22px;
+                margin: 32px 0 4px;
+            }
+            h1 {
+                font-family: 'Young Serif', Georgia, serif;
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 1.15;
+                margin: 0 0 12px;
+            }
+            h2 {
+                font-size: 18px;
+                font-weight: 600;
+                margin: 0 0 8px;
+            }
+            .intro {
+                font-size: 19px;
+                margin: 0 0 24px;
+            }
+            section {
+                background: var(--card);
+                border: 1px solid var(--line);
+                border-radius: 20px;
+                padding: 20px;
+                margin: 0 0 14px;
+            }
+            section p {
+                margin: 0 0 10px;
+            }
+            section p:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                color: var(--terra);
+            }
+            .link a {
+                font-weight: 600;
+            }
+            .version,
+            footer {
+                color: var(--muted);
+                font-size: 14px;
+                text-align: center;
+            }
+            footer {
+                margin-top: 32px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <nav class="langs" aria-label="Language">
+                <a href="?lang=nl" data-lang="nl" hreflang="nl">Nederlands</a>
+                <a href="?lang=en" data-lang="en" hreflang="en">English</a>
+                <a href="?lang=fr" data-lang="fr" hreflang="fr">Français</a>
+                <a href="?lang=de" data-lang="de" hreflang="de">Deutsch</a>
+            </nav>
+            <article lang="nl" data-lang="nl" hidden>
+                <p class="brand">Recipe Book</p>
+                <h1>Privacy</h1>
+                <p class="intro">Recipe Book is een app voor jezelf en je huishouden. Zo gaat hij om met je gegevens.</p>
+                <section>
+                    <h2>Alles op je telefoon</h2>
+                    <p>
+                        Je recepten, foto&#39;s, beoordelingen en instellingen staan alleen op deze telefoon. Er is geen
+                        account, geen server van de maker, en geen analytics of tracking.
+                    </p>
+                </section>
+                <section>
+                    <h2>Huishouden</h2>
+                    <p>
+                        Delen met je huishouden gaat rechtstreeks en versleuteld tussen gekoppelde telefoons op hetzelfde
+                        wifi-netwerk. Er staat niets in de cloud. Je Gemini API-key kan zo ook gedeeld worden met telefoons
+                        in je huishouden die geen eigen key hebben; dat zet je uit bij Instellingen.
+                    </p>
+                </section>
+                <section>
+                    <h2>Google Gemini</h2>
+                    <p>
+                        Alleen als je importeert, vertaalt of een illustratie laat maken, stuurt de app de recepttekst, de
+                        link of je foto&#39;s naar Google Gemini, met je eigen API-key. Daarvoor gelden de voorwaarden en het
+                        privacybeleid van Google.
+                    </p>
+                    <p>
+                        Met een gratis key mag Google wat je stuurt gebruiken om zijn producten te verbeteren, en kunnen
+                        medewerkers van Google het lezen. Stuur dus geen persoonlijke gegevens mee.
+                    </p>
+                    <p class="link"><a href="https://ai.google.dev/gemini-api/terms">Voorwaarden van de Gemini API</a></p>
+                    <p class="link"><a href="https://policies.google.com/privacy">Privacybeleid van Google</a></p>
+                </section>
+                <section>
+                    <h2>Links openen</h2>
+                    <p>
+                        Importeer je een recept via een link, dan haalt de app die pagina op bij de website zelf, zoals je
+                        browser dat ook doet.
+                    </p>
+                </section>
+                <section>
+                    <h2>Back-ups</h2>
+                    <p>Een back-up is een bestand dat jij zelf bewaart en deelt. De app stuurt het nergens heen.</p>
+                </section>
+                <section>
+                    <h2>Recepten van anderen</h2>
+                    <p>
+                        Een recept blijft van de oorspronkelijke maker of rechthebbende. De app bewaart de bronlink en is
+                        bedoeld voor eigen gebruik en gebruik binnen je huishouden, niet om recepten te publiceren of er geld
+                        mee te verdienen.
+                    </p>
+                </section>
+                <section>
+                    <h2>Maker</h2>
+                    <p>
+                        Recipe Book is gemaakt door Niels Witte (ice-crystals). Vragen, feedback of iets melden? Mail naar
+                        <a href="mailto:info@ice-crystals.nl">info@ice-crystals.nl</a>.
+                    </p>
+                    <p>
+                        Stuur je feedback of een melding, dan gaat die als gewone e-mail vanuit je eigen mailapp naar
+                        ice-crystals. Je e-mailadres en wat je schrijft worden alleen gebruikt om je te antwoorden en de app
+                        te verbeteren.
+                    </p>
+                    <p class="link">
+                        <a href="mailto:info@ice-crystals.nl?subject=Recipe%20Book&amp;body=">Mail naar ice-crystals</a>
+                    </p>
+                </section>
+                <p class="version">Versie 3 · 10 nov 2026</p>
+            </article>
+            <article lang="en" data-lang="en">
+                <p class="brand">Recipe Book</p>
+                <h1>Privacy</h1>
+                <p class="intro">Recipe Book is an app for you and your household. This is how it handles your data.</p>
+                <section>
+                    <h2>Everything on your phone</h2>
+                    <p>
+                        Your recipes, photos, reviews and settings are stored only on this phone. There is no account, no
+                        server run by the maker, and no analytics or tracking.
+                    </p>
+                </section>
+                <section>
+                    <h2>Household</h2>
+                    <p>
+                        Sharing with your household goes directly between paired phones on the same Wi-Fi network, encrypted.
+                        Nothing is stored in the cloud. Your Gemini API key can be shared this way too, with phones in your
+                        household that have no key of their own; you can turn that off in Settings.
+                    </p>
+                </section>
+                <section>
+                    <h2>Google Gemini</h2>
+                    <p>
+                        Only when you import, translate or have an illustration drawn does the app send the recipe text, the
+                        link or your photos to Google Gemini, using your own API key. Google&#39;s terms and privacy policy
+                        apply to that.
+                    </p>
+                    <p>
+                        With a free key, Google may use what you send to improve its products, and Google staff may read it.
+                        So don&#39;t include personal information.
+                    </p>
+                    <p class="link"><a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a></p>
+                    <p class="link"><a href="https://policies.google.com/privacy">Google privacy policy</a></p>
+                </section>
+                <section>
+                    <h2>Opening links</h2>
+                    <p>
+                        When you import a recipe from a link, the app fetches that page from the website itself, just like
+                        your browser does.
+                    </p>
+                </section>
+                <section>
+                    <h2>Backups</h2>
+                    <p>A backup is a file you keep and share yourself. The app doesn&#39;t send it anywhere.</p>
+                </section>
+                <section>
+                    <h2>Other people&#39;s recipes</h2>
+                    <p>
+                        A recipe remains the property of its original author or rights holder. The app keeps the source link
+                        and is meant for personal use and use within your household, not for publishing recipes or making
+                        money from them.
+                    </p>
+                </section>
+                <section>
+                    <h2>Maker</h2>
+                    <p>
+                        Recipe Book is made by Niels Witte (ice-crystals). Questions, feedback or something to report? Email
+                        <a href="mailto:info@ice-crystals.nl">info@ice-crystals.nl</a>.
+                    </p>
+                    <p>
+                        If you send feedback or a report, it goes as a normal email from your own email app to ice-crystals.
+                        Your email address and what you write are only used to reply to you and to improve the app.
+                    </p>
+                    <p class="link">
+                        <a href="mailto:info@ice-crystals.nl?subject=Recipe%20Book&amp;body=">Email ice-crystals</a>
+                    </p>
+                </section>
+                <p class="version">Version 3 · Nov 10, 2026</p>
+            </article>
+            <article lang="fr" data-lang="fr" hidden>
+                <p class="brand">Recipe Book</p>
+                <h1>Confidentialité</h1>
+                <p class="intro">Recipe Book est une app pour vous et votre foyer. Voici comment elle traite vos données.</p>
+                <section>
+                    <h2>Tout sur votre téléphone</h2>
+                    <p>
+                        Vos recettes, photos, avis et réglages restent uniquement sur ce téléphone. Il n&#39;y a ni compte,
+                        ni serveur du créateur, ni statistiques, ni suivi.
+                    </p>
+                </section>
+                <section>
+                    <h2>Foyer</h2>
+                    <p>
+                        Le partage avec votre foyer se fait directement entre téléphones associés sur le même réseau Wi-Fi,
+                        de manière chiffrée. Rien n&#39;est stocké dans le cloud. Votre clé API Gemini peut aussi être
+                        partagée ainsi avec les téléphones de votre foyer qui n&#39;ont pas de clé ; vous pouvez le
+                        désactiver dans les Réglages.
+                    </p>
+                </section>
+                <section>
+                    <h2>Google Gemini</h2>
+                    <p>
+                        Uniquement quand vous importez, traduisez ou faites dessiner une illustration, l&#39;app envoie le
+                        texte de la recette, le lien ou vos photos à Google Gemini, avec votre propre clé API. Les conditions
+                        et la politique de confidentialité de Google s&#39;appliquent.
+                    </p>
+                    <p>
+                        Avec une clé gratuite, Google peut utiliser ce que vous envoyez pour améliorer ses produits, et des
+                        employés de Google peuvent le lire. N&#39;y mettez donc pas de données personnelles.
+                    </p>
+                    <p class="link"><a href="https://ai.google.dev/gemini-api/terms">Conditions de l&#39;API Gemini</a></p>
+                    <p class="link"><a href="https://policies.google.com/privacy">Règles de confidentialité de Google</a></p>
+                </section>
+                <section>
+                    <h2>Ouvrir des liens</h2>
+                    <p>
+                        Quand vous importez une recette par un lien, l&#39;app récupère la page directement sur le site,
+                        comme le fait votre navigateur.
+                    </p>
+                </section>
+                <section>
+                    <h2>Sauvegardes</h2>
+                    <p>
+                        Une sauvegarde est un fichier que vous conservez et partagez vous-même. L&#39;app ne l&#39;envoie
+                        nulle part.
+                    </p>
+                </section>
+                <section>
+                    <h2>Recettes des autres</h2>
+                    <p>
+                        Une recette reste la propriété de son auteur d&#39;origine ou de l&#39;ayant droit. L&#39;app
+                        conserve le lien source et est destinée à un usage personnel et au sein de votre foyer, pas à publier
+                        des recettes ni à en tirer profit.
+                    </p>
+                </section>
+                <section>
+                    <h2>Créateur</h2>
+                    <p>
+                        Recipe Book est créé par Niels Witte (ice-crystals). Une question, un avis ou un signalement ?
+                        Écrivez à <a href="mailto:info@ice-crystals.nl">info@ice-crystals.nl</a>.
+                    </p>
+                    <p>
+                        Si vous envoyez un avis ou un signalement, il part comme un e-mail normal depuis votre propre app de
+                        messagerie vers ice-crystals. Votre adresse e-mail et ce que vous écrivez servent uniquement à vous
+                        répondre et à améliorer l&#39;app.
+                    </p>
+                    <p class="link">
+                        <a href="mailto:info@ice-crystals.nl?subject=Recipe%20Book&amp;body=">Écrire à ice-crystals</a>
+                    </p>
+                </section>
+                <p class="version">Version 3 · 10 nov. 2026</p>
+            </article>
+            <article lang="de" data-lang="de" hidden>
+                <p class="brand">Recipe Book</p>
+                <h1>Datenschutz</h1>
+                <p class="intro">Recipe Book ist eine App für dich und deinen Haushalt. So geht sie mit deinen Daten um.</p>
+                <section>
+                    <h2>Alles auf deinem Handy</h2>
+                    <p>
+                        Deine Rezepte, Fotos, Bewertungen und Einstellungen liegen nur auf diesem Handy. Es gibt kein Konto,
+                        keinen Server des Entwicklers und keine Analyse oder Tracking.
+                    </p>
+                </section>
+                <section>
+                    <h2>Haushalt</h2>
+                    <p>
+                        Das Teilen mit deinem Haushalt läuft direkt und verschlüsselt zwischen gekoppelten Handys im selben
+                        WLAN. Nichts liegt in der Cloud. Auch dein Gemini-API-Schlüssel kann so mit Handys im Haushalt ohne
+                        eigenen Schlüssel geteilt werden; das schaltest du in den Einstellungen aus.
+                    </p>
+                </section>
+                <section>
+                    <h2>Google Gemini</h2>
+                    <p>
+                        Nur wenn du importierst, übersetzt oder eine Illustration zeichnen lässt, schickt die App den
+                        Rezepttext, den Link oder deine Fotos an Google Gemini, mit deinem eigenen API-Schlüssel. Dafür
+                        gelten die Bedingungen und die Datenschutzerklärung von Google.
+                    </p>
+                    <p>
+                        Mit einem kostenlosen Schlüssel darf Google deine Eingaben nutzen, um seine Produkte zu verbessern,
+                        und Google-Mitarbeiter können sie lesen. Schicke also keine persönlichen Daten mit.
+                    </p>
+                    <p class="link"><a href="https://ai.google.dev/gemini-api/terms">Bedingungen der Gemini API</a></p>
+                    <p class="link"><a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a></p>
+                </section>
+                <section>
+                    <h2>Links öffnen</h2>
+                    <p>
+                        Importierst du ein Rezept über einen Link, lädt die App die Seite direkt von der Website, so wie dein
+                        Browser.
+                    </p>
+                </section>
+                <section>
+                    <h2>Sicherungen</h2>
+                    <p>
+                        Eine Sicherung ist eine Datei, die du selbst aufbewahrst und teilst. Die App schickt sie
+                        nirgendwohin.
+                    </p>
+                </section>
+                <section>
+                    <h2>Rezepte von anderen</h2>
+                    <p>
+                        Ein Rezept bleibt Eigentum der ursprünglichen Autorin, des Autors oder der Rechteinhaber. Die App
+                        speichert den Quelllink und ist für den eigenen Gebrauch und den Gebrauch im Haushalt gedacht, nicht
+                        zum Veröffentlichen von Rezepten oder um damit Geld zu verdienen.
+                    </p>
+                </section>
+                <section>
+                    <h2>Entwickler</h2>
+                    <p>
+                        Recipe Book wurde von Niels Witte (ice-crystals) entwickelt. Fragen, Feedback oder etwas zu melden?
+                        Schreib an <a href="mailto:info@ice-crystals.nl">info@ice-crystals.nl</a>.
+                    </p>
+                    <p>
+                        Wenn du Feedback oder eine Meldung sendest, geht sie als normale E-Mail aus deiner eigenen Mail-App
+                        an ice-crystals. Deine E-Mail-Adresse und was du schreibst, werden nur genutzt, um dir zu antworten
+                        und die App zu verbessern.
+                    </p>
+                    <p class="link">
+                        <a href="mailto:info@ice-crystals.nl?subject=Recipe%20Book&amp;body=">E-Mail an ice-crystals</a>
+                    </p>
+                </section>
+                <p class="version">Version 3 · 10. Nov. 2026</p>
+            </article>
+            <footer>Recipe Book · ice-crystals · <a href="mailto:info@ice-crystals.nl">info@ice-crystals.nl</a></footer>
+        </main>
+        <script>
+            (function () {
+                var langs = ['nl', 'en', 'fr', 'de'];
+                function pick() {
+                    var asked = new URLSearchParams(location.search).get('lang');
+                    if (langs.indexOf(asked) >= 0) return asked;
+                    var wanted = navigator.languages || [navigator.language || 'en'];
+                    for (var i = 0; i < wanted.length; i++) {
+                        var code = String(wanted[i]).slice(0, 2).toLowerCase();
+                        if (langs.indexOf(code) >= 0) return code;
+                    }
+                    return 'en';
+                }
+                function show(lang) {
+                    document.documentElement.lang = lang;
+                    document.querySelectorAll('article').forEach(function (a) {
+                        a.hidden = a.dataset.lang !== lang;
+                    });
+                    document.querySelectorAll('.langs a').forEach(function (a) {
+                        a.setAttribute('aria-current', String(a.dataset.lang === lang));
+                    });
+                }
+                document.querySelectorAll('.langs a').forEach(function (a) {
+                    a.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        history.replaceState(null, '', '?lang=' + a.dataset.lang);
+                        show(a.dataset.lang);
+                    });
+                });
+                show(pick());
+            })();
+        </script>
+    </body>
+</html>
