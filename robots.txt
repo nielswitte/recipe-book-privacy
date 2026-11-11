@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nielswitte.github.io/recipe-book-privacy/sitemap.xml
+Sitemap: https://recipe-book.ice-crystals.nl/sitemap.xml
